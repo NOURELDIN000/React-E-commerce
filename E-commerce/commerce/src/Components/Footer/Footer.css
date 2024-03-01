@@ -1,0 +1,35 @@
+.footer {
+  color: #fff;
+  background-color: #0d8af0;
+  padding: 50px 0;
+  margin-top: 300px;
+}
+
+.footer .links li a {
+  text-decoration: none;
+  margin-right: 30px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.footer .links li a:hover {
+  border-bottom: 1px solid #fff;
+}
+
+.footer .icons {
+  margin-top: 30px;
+  color: #fff;
+}
+
+.footer .icons li a {
+  margin-right: 13px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 25px;
+}
+
+.footer p {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}

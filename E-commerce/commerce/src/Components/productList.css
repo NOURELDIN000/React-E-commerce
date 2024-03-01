@@ -1,0 +1,22 @@
+
+.cat-btn{
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #0d8af0;
+    border: 1px solid #0d8af0;
+    transition: .3s ease-in-out;
+    margin-bottom: 15px;
+   
+    
+   
+}
+
+.cat-btn:hover{
+    color: #0d8af0;
+    background-color: #fff;
+}
+
+
+
