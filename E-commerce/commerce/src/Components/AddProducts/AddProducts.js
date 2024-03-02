@@ -25,40 +25,35 @@ const AddProducts = ({ setProductCount }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  useEffect(() => {
-    if (image && title && price) {
-      if (image && title && price && isAddProductPage) {
-        const newProduct = { image, title, price };
-        // const updatedProducts = [...addedProducts];
-        if (
-          !addedProducts.some(
-            (product) =>
-              product.title === title &&
-              product.price === price &&
-              product.image === image
-          )
-        ) {
-          // updatedProducts.push(newProduct);
-          // setAddedProducts(updatedProducts);
-          // localStorage.setItem('addedProducts', JSON.stringify(updatedProducts));
-          // return updatedProducts;
-          setAddedProducts((prevProducts) => {
-            const updatedProducts = [...prevProducts, newProduct];
-            localStorage.setItem(
-              "addedProducts",
-              JSON.stringify(updatedProducts)
-            );
+useEffect(() => {
+    if (image && title && price && isAddProductPage) {
+      const newProduct = { image, title, price };
 
-            return updatedProducts;
-          });
+      if (
+        !addedProducts.some(
+          (product) =>
+            product.title === title &&
+            product.price === price &&
+            product.image === image
+        )
+      ) {
+        setAddedProducts((prevProducts) => {
+          const updatedProducts = [...prevProducts, newProduct];
+          localStorage.setItem(
+            "addedProducts",
+            JSON.stringify(updatedProducts)
+          );
 
-          // setProductCount(prevCount => prevCount + 1);
-        }
+          return updatedProducts;
+        });
+
+        // setProductCount(prevCount => prevCount + 1);
       }
-
-      // Clear URL parameters after adding product
-      window.history.replaceState({}, document.title, "/");
     }
+
+    // Clear URL parameters after adding product
+    window.history.replaceState({}, document.title, "/");
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [image, title, price, isAddProductPage]);
 
