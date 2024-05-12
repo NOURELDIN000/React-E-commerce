@@ -71,12 +71,20 @@ function ProductsList() {
   return (
     <>
       <div style={{ marginTop: "100px" }}>
-        <h2
-          className="mt-3 pt-3 text-center fw-bold fst-italic"
-          style={{ color: "#0d8af0" }}
-        >
-          Our Products
-        </h2>
+        <div className="mt-3  text-center fw-bold fst-italic">
+          <h2
+            style={{
+              color: "#0d8af0",
+              borderTop: "2px solid #0d8af0 ",
+              borderBottom: "2px solid #0d8af0 ",
+              display: "inline-block",
+              padding: "1rem 0",
+              letterSpacing: "1px",
+            }}
+          >
+            Our Products
+          </h2>
+        </div>
 
         <div
           className="container text-center"
